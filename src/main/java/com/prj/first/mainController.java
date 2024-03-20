@@ -12,4 +12,9 @@ public class mainController {
 	public String test() {
 		return "Hola a ver";
 	}
+	
+	@GetMapping("/")
+	public String root() {
+		return "redirect:/photo/list";
+	}
 }
