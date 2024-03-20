@@ -8,7 +8,9 @@
 	</thead>
 	<tbody>
 		<tr th:each="photo : ${photoList}">
-			<td th:text="${photo.title}"></td>
+			<td>
+				<a th:href="@{|/photo/detail/${photo.id}|}" th:text="${photo.title}"></a>
+			</td>
 			<td th:text="${photo.createDate}"></td>
 		</tr>
 	</tbody>

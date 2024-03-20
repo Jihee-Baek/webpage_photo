@@ -1,12 +1,11 @@
 package com.prj.first.person;
+import com.prj.first.tag.tagtbl;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +26,9 @@ public class persontbl {
 	private String relation;
 	
 	private LocalDateTime createDate;
+	
+	@OneToMany(mappedBy="person")
+	private List<tagtbl> tags = new ArrayList();
 	
 	public Integer getId() {
 		return this.id;
