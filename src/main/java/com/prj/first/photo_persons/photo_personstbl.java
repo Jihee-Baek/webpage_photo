@@ -1,11 +1,10 @@
-package com.prj.first.dto.tbl;
+package com.prj.first.photo_persons;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,19 +12,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class persontbl {
-	
+public class photo_personstbl {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
+
+	@Column
+	private Integer photo_id;
 	
-	@Column(length=10)
-	private String name;
-	
-	@Column(length=10)
-	private String relation;
-	
-//	@ManyToOne
-//	private phototbl photo;
-	
+	@Column
+	private Integer person_id;
 }

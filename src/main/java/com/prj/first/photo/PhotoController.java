@@ -1,15 +1,15 @@
-package com.prj.first.controller;
+package com.prj.first.photo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class mainController {
+public class PhotoController {
 
-	@GetMapping("test")
+	@GetMapping("/photo/list")
 	@ResponseBody
-	public String test() {
-		return "Hola a ver";
+	public String photoList() {
+		return "question list";
 	}
 }
